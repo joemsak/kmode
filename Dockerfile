@@ -4,6 +4,7 @@ WORKDIR /go/src/app
 
 COPY . .
 
+RUN go mod init kmode
 RUN go build kmode
 
 CMD ["bash"]
