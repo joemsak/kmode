@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"regexp"
@@ -36,6 +37,7 @@ func main() {
 		if new_matched {
 			new_mode := regexp.MustCompile(new_mode_re)
 			lines[i] = new_mode.ReplaceAllString(line, "APP_MODE=${1}")
+			fmt.Println(new_mode.ReplaceAllString(line, "Switched to ${1} mode."))
 		}
 
 	}
