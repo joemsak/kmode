@@ -26,7 +26,7 @@ func main() {
 		new_matched, err2 := regexp.MatchString(new_mode_re, line)
 
 		if err != nil || err2 != nil {
-			log.Fatal(err)
+			log.Fatalln(err)
 		}
 
 		if current_matched {
